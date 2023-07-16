@@ -33,11 +33,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.completefeature.API.SecondActivity
 import com.example.completefeature.ui.theme.CompleteFeatureTheme
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,6 +93,7 @@ fun AppContent(drawerState: DrawerState, scope: CoroutineScope) {
         Column(
             modifier = Modifier.padding(top = 62.dp)
         ) {
+            //app content
             openActivity()
         }
     }
